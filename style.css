@@ -35,7 +35,10 @@ nav a.logo{
 }
 
 nav .links a:not(:last-child){
-    margin-right: 20px;
+    margin-right: 50px;
+    font-size: 22px;
+
+        
 }
 
 nav .login button{
@@ -81,9 +84,11 @@ header .left a{
     display: flex;
     align-items: center;
     background: #000;
-    width: 200px;
-    padding: 8px;
+    width: 232px;
+    padding: 9px;
     border-radius: 60px;
+    align-items: center;
+    
 }
 
 header .left a i{
@@ -95,7 +100,7 @@ header .left a i{
 
 header .left a span{
     color: #fff;
-    margin-left: 10px;
+    margin-left: 10spx;
 }
 
 header img{
