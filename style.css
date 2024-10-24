@@ -76,8 +76,6 @@ nav{
     background-color: #034bf1;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    animation: blink 1s infinite; /* Ajoutez l'animation ici */
 }
 
 @keyframes blink {
