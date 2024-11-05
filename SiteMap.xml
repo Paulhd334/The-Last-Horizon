@@ -53,4 +53,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
+    <url>
+        <loc>https://the-last-horizon.fr/index-fr.html</loc>
+        <lastmod>2024-09-18T12:00:47+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://the-last-horizon.fr/À.propos.de.moi.html</loc>
+        <lastmod>2024-09-18T12:00:47+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
 </urlset>
