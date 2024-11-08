@@ -1,4 +1,25 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <users>
-	<user>5C7033CEED231D8E827B3D354E9A7981</user>
+    <user>
+        <id>5C7033CEED231D8E827B3D354E9A7981</id>
+        <name>UNWARE STUDIO</name>
+        <email>contact?unwarestudio@gmail.com</email>
+        <registrationDate>2024-11-08</registrationDate>
+        <status>active</status>
+        <preferences>
+            <language>en</language>
+            <newsletterSubscribed>true</newsletterSubscribed>
+        </preferences>
+    </user>
+    <user>
+        <id>4D2A54B7DE341A2E927B4F264B9F7892</id>
+        <name>Support UNWARE STUDIO/name>
+        <email>contact.client.unwarestudio@gmail.com</email>
+        <registrationDate>2024-05-12</registrationDate>
+        <status>active</status>
+        <preferences>
+            <language>fr</language>
+            <newsletterSubscribed>false</newsletterSubscribed>
+        </preferences>
+    </user>
 </users>
