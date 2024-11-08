@@ -11,15 +11,4 @@
             <newsletterSubscribed>true</newsletterSubscribed>
         </preferences>
     </user>
-    <user>
-        <id>4D2A54B7DE341A2E927B4F264B9F7892</id>
-        <name>Support UNWARE STUDIO/name>
-        <email>contact.client.unwarestudio@gmail.com</email>
-        <registrationDate>2024-05-12</registrationDate>
-        <status>active</status>
-        <preferences>
-            <language>fr</language>
-            <newsletterSubscribed>false</newsletterSubscribed>
-        </preferences>
-    </user>
-</users>
+
