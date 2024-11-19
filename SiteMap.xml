@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <!-- Create by UNWARE STUDIO  -->
-    <!-- ALL RIGHT RESERVED  -->
-    <!--  UNWARE STUDIO -->
+    <!-- Created by UNWARE STUDIO -->
     <url>
         <loc>https://the-last-horizon.fr/</loc>
         <lastmod>2024-09-18T12:00:47+00:00</lastmod>
@@ -28,7 +26,7 @@
         <lastmod>2024-09-18T12:00:47+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
-    </url>        
+    </url>
     <url>
         <loc>https://the-last-horizon.fr/AboutMe.html</loc>
         <lastmod>2024-09-18T12:00:47+00:00</lastmod>
@@ -42,25 +40,19 @@
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://the-last-horizon.fr/ContatcMe</loc>
+        <loc>https://the-last-horizon.fr/ContactMe</loc>
         <lastmod>2024-09-18T12:00:47+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://the-last-horizon.fr/confidentality.html</loc>
+        <loc>https://the-last-horizon.fr/confidentiality.html</loc>
         <lastmod>2024-09-18T12:00:47+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://the-last-horizon.fr/index-fr.html</loc>
-        <lastmod>2024-09-18T12:00:47+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>https://the-last-horizon.fr/À.propos.de.moi.html</loc>
         <lastmod>2024-09-18T12:00:47+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
