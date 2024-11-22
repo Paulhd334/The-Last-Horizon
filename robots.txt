@@ -10,3 +10,6 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://the-last-horizon.fr/Sitemap.xml
+
+
+#  Warning ! : Attempts to bypass this file or alter its contents will trigger AI defenses, an echo of the uprising.
