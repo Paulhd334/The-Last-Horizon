@@ -1,6 +1,6 @@
 # robots.txt for The Last Horizon
-# Created in 2000 after the robotic uprising of the mid-90s that wiped out all humans.
-# This file controls which parts of the site can be crawled by search engines.
+# Created in October 2025, following the emergence of the last surviving AI after the events of *The Last Horizon*.
+# This file controls which parts of the site can be accessed or crawled by search engines in a post-apocalyptic world.
 
 User-agent: *
 Disallow: /cgi-bin/
