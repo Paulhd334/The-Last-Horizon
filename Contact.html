@@ -54,14 +54,29 @@
     <h2>Sublim Ticket</h2>
     <hr>
 </div>
-<input type="hidden" name="access_key" value="c5fdf7c5-0527-4c26-a167-d4d5fbc388cc">
-    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-    <input type="text" name="email" placeholder="Your Email" class="contact-inputs" required>
-    <textarea name="message"  placeholder="Your Message" class="contact-inputs" required></textarea>
-   
- 
-       <button type="submit">Submit<img src="images/ARROW.png" alt="submit"></button>
-    </form>
+
+<!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="78727e32-c8c2-4de5-8da6-d00dc0c95afa">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <textarea name="message" required></textarea>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+    <button type="submit">Submit Form</button>
+
+</form>
+
+
+
+
+    
 
 
     
