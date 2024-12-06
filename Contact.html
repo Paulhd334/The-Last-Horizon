@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -17,7 +18,16 @@
         }
 
         /* Global Styles */
-        body {
+        body 
+        {
+    -webkit-text-size-adjust: 100%; /* Empêche Safari d'agrandir le texte automatiquement */
+}
+
+      input, textarea {
+     -webkit-appearance: none; /* Supprime les styles par défaut des champs sur iOS */
+      border-radius: 5px; /* Ajoutez si vous souhaitez conserver des coins arrondis */
+}
+        {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #0a0f2a, #1e2746);
             color: #ffffff;
