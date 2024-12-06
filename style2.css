@@ -1,0 +1,23 @@
+/* Global Styles */
+body {
+    -webkit-text-size-adjust: 100%; /* Empêche Safari d'agrandir le texte automatiquement */
+    background: linear-gradient(to bottom, #0a0f2a, #1e2746); /* Applique le fond ici */
+    color: #ffffff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif; /* Police générale */
+}
+
+/* Le fond global est en noir, mais sans cacher le texte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Autres éléments comme les titres et textes ont une couleur claire */
+h1, p, label, input, textarea, button {
+    color: #ffffff; /* Assure que le texte reste visible */
+}
