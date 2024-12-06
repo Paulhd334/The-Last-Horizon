@@ -115,10 +115,44 @@
         }
 
         .contact-form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
+    color: white;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.contact-form input,
+.contact-form textarea {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.contact-form button {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: white;
+    color: black;
+}
+
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
         }
+
 
         .contact-form input,
         .contact-form textarea {
