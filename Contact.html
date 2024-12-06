@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="style.css">
     <title>The Last Horizon - Contact</title>
     <style>
-        /* General Reset */
+        /* Reset CSS */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #0a0f2a, #1e2746);
@@ -26,12 +27,21 @@
             min-height: 100vh;
         }
 
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         nav {
+            background-color: #121829;
+            padding: 1rem 0;
+        }
+
+        nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
-            background-color: #121829;
         }
 
         nav .nav-logo img {
@@ -51,14 +61,19 @@
             text-decoration: none;
             color: #ffffff;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links .link a:hover {
+            color: #007bff;
         }
 
         header.container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 3rem 2rem;
-            background-color: #0a0f2a;
+            padding: 3rem 0;
+            flex-wrap: wrap;
         }
 
         header .content {
@@ -66,7 +81,7 @@
         }
 
         header .content h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #ffffff;
             margin-bottom: 1rem;
         }
@@ -87,7 +102,6 @@
             margin: 2rem auto;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            max-width: 600px;
         }
 
         .contact-form label {
@@ -128,9 +142,8 @@
         }
 
         footer.container {
-            margin-top: auto;
             background-color: #121829;
-            padding: 2rem;
+            padding: 2rem 0;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -164,18 +177,20 @@
 
 <body>
     <nav>
-        <div class="nav-logo">
-            <a href="index.html">
-                <img src="images/UNWARE STUDIO.png" alt="UNWARE STUDIO Logo">
-            </a>
+        <div class="container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/UNWARE STUDIO.png" alt="UNWARE STUDIO Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="link"><a href="index.html">Home</a></li>
+                <li class="link"><a href="confidentiality.html">Privacy Policy</a></li>
+                <li class="link"><a href="Cookies.html">Cookies Policy</a></li>
+                <li class="link"><a href="AboutMe.html">About Me</a></li>
+                <li class="link"><a href="Contact.html">Contact Me</a></li>
+            </ul>
         </div>
-        <ul class="nav-links">
-            <li class="link"><a href="index.html">Home</a></li>
-            <li class="link"><a href="confidentiality.html">Privacy Policy</a></li>
-            <li class="link"><a href="Cookies.html">Cookies Policy</a></li>
-            <li class="link"><a href="AboutMe.html">About Me</a></li>
-            <li class="link"><a href="Contact.html">Contact Me</a></li>
-        </ul>
     </nav>
 
     <header class="container">
@@ -188,7 +203,7 @@
         </div>
     </header>
 
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form container">
         <input type="hidden" name="access_key" value="78727e32-c8c2-4de5-8da6-d00dc0c95afa">
         <input type="hidden" name="subject" value="New Submission from Web3Forms">
         <input type="hidden" name="redirect" value="https://web3forms.com/success">
