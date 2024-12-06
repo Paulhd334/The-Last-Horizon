@@ -20,7 +20,8 @@ a {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #18181B; /* Couleur de fond principale */
+    background-color: #18181B;
+    color: #ccc;
 }
 
 nav {
@@ -113,7 +114,6 @@ header .content h4 {
     color: #ccc;
     font-size: 1rem;
     font-weight: 600;
-    position: center;
 }
 
 header .content h1 {
@@ -122,19 +122,16 @@ header .content h1 {
     font-size: 3rem;
     font-weight: 700;
     line-height: 4rem;
-    position: center;
 }
 
 header .content h1 span {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #fff;
-    position: center;
 }
 
 header .content p {
     margin-bottom: 2rem;
     color: #ccc;
-    position: center;
 }
 
 header .image {
@@ -181,13 +178,11 @@ section .header {
     border: 2px solid transparent;
     border-radius: 15px;
     transition: all 0.3s ease;
-    position: center;
 }
 
 .features .card:hover {
     background-color: #323232;
     border-color: #fff;
-    position: center;
 }
 
 .features .card span {
@@ -253,7 +248,6 @@ section .header {
 .pricing .card .content {
     flex: 1;
     margin-bottom: 2rem;
-    position: center;
 }
 
 .pricing .card h4 {
@@ -359,7 +353,7 @@ footer .column > a:hover {
     text-align: center;
 }
 
-@media (width < 600px) {
+@media (max-width: 600px) {
     header .image::before {
         display: none;
     }
@@ -377,18 +371,28 @@ footer .column > a:hover {
     }
 }
 
-@media (width < 900px) {
+@media (max-width: 900px) {
     .nav-links {
         display: none;
     }
+
     header {
         grid-template-columns: repeat(1, 1fr);
     }
+
     header .image {
         grid-area: 1/1/2/2;
     }
+
     .features {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .pricing {
-        grid-template-columns: repeat(2
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        grid-template-columns: 1fr 200px;
+    }
+}
