@@ -1,110 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>About Me - The Last Horizon</title>
-    <link rel="icon" href="images/UNWARE STUDIO.png" type="image/x-icon">
+    <title>About Me - Game Developer</title>
+    <style>
+        /* Global reset */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Assombrit l'arrière-plan */
+            color: #fff;
+        }
+
+        /* About Me header */
+        .about-header {
+            display: flex;
+            flex-wrap: wrap; /* Passe les éléments en colonne sur petit écran */
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+
+        .about-header .content {
+            flex: 1;
+            max-width: 600px;
+            margin-right: 2rem;
+        }
+
+        .about-header .image {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .about-header .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Section titles */
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills section */
+        .skills-list {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            flex-wrap: wrap; /* S'adapte aux petits écrans */
+            margin-top: 2rem;
+        }
+
+        .skill {
+            flex: 1 1 300px;
+            background-color: #1e1e1e;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill i {
+            font-size: 2rem;
+            color: #00bcd4; /* Couleur des icônes */
+            margin-bottom: 1rem;
+        }
+
+        /* Projects section */
+        .projects-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; /* Pour que les projets passent en colonne sur mobile */
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project {
+            flex: 1 1 300px;
+            text-align: center;
+            background-color: #1e1e1e;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2rem;
+            background-color: #1e1e1e;
+            color: #ccc;
+        }
+
+        footer .column {
+            flex: 1 1 200px;
+            margin: 1rem;
+        }
+
+        footer .column h4 {
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        footer .socials a {
+            margin: 0 0.5rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1rem;
+            background-color: #121212;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Bouton */
+        .btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
-
-    <nav>
-        <div class="nav-logo">
-            <a href="index.html">
-                <img src="images/UNWARE STUDIO.png" alt="UNWARE STUDIO Logo">
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li class="link"><a href="index.html">Home</a></li>
-            <li class="link"><a href="confidentality.html">Privacy Policy</a></li>
-            <li class="link"><a href="Cookies.html">Cookies Policy</a></li>
-            <li class="link"><a href="AboutMe.html">About Me</a></li>
-            <li class="link"><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
     <header class="about-header">
         <div class="content">
-            <h1>About <span>Me</span></h1>
-            <p>Hello! My name is <strong>[Your Name]</strong>, and I’m an independent game developer. I started my journey with Unreal Engine 5 three years ago, and since then, I’ve been captivated by the limitless possibilities of game design. My mission? To create immersive experiences that blend storytelling and innovation.</p>
+            <h1>About Me</h1>
+            <p>Hello! My name is [Your Name], and I’m an independent game developer. I started my journey with Unreal Engine 5 three years ago, and since then, I've been captivated by the limitless possibilities of game design. My mission? To create immersive experiences that blend storytelling and innovation.</p>
             <p>Currently, I’m working on my most ambitious project yet: <strong>The Last Horizon</strong>. It’s a Sci-Fi Horror game that combines suspenseful exploration, thrilling encounters, and a unique narrative that keeps players on edge.</p>
-            <a href="Contact.html" class="btn">Get in Touch</a>
+            <a href="#" class="btn">Get in Touch</a>
         </div>
         <div class="image">
-            <img src="images/THE LAST HORIZON.png" alt="The Last Horizon Game">
+            <img src="your-image-path.jpg" alt="The Last Horizon">
         </div>
     </header>
-
-    <section class="skills container">
+    <section>
         <h2>My Skills</h2>
         <div class="skills-list">
             <div class="skill">
-                <i class="ri-code-s-slash-line"></i>
+                <i>&#128187;</i>
                 <h3>Game Development</h3>
                 <p>Expertise in Unreal Engine 5, level design, and game mechanics development.</p>
             </div>
             <div class="skill">
-                <i class="ri-lightbulb-line"></i>
+                <i>&#128296;</i>
                 <h3>Creative Vision</h3>
                 <p>Strong focus on storytelling and creating memorable player experiences.</p>
             </div>
             <div class="skill">
-                <i class="ri-paint-brush-line"></i>
+                <i>&#128736;</i>
                 <h3>3D Modeling</h3>
                 <p>Proficiency in Blender for asset creation and visual design.</p>
             </div>
         </div>
     </section>
-
-    <section class="projects container">
+    <section>
         <h2>My Projects</h2>
         <div class="projects-list">
             <div class="project">
-                <img src="images/project1.png" alt="Project 1">
-                <h3>The Last Horizon</h3>
-                <p>A Sci-Fi Horror game where players explore an alien world and face terrifying challenges.</p>
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of the project goes here.</p>
             </div>
             <div class="project">
-                <img src="images/project2.png" alt="Project 2">
-                <h3>[Project Name]</h3>
-                <p>A brief description of another project you’ve worked on or plan to develop.</p>
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of the project goes here.</p>
             </div>
         </div>
     </section>
-
-    <footer class="container">
+    <footer>
         <div class="column">
-            <div class="logo">
-                <img src="images/UNWARE STUDIO.png" alt="UNWARE STUDIO Logo">
-            </div>
-            <div class="socials">
-                <a href="#"><i class="ri-youtube-line"></i></a>
-                <a href="#"><i class="ri-instagram-line"></i></a>
-                <a href="#"><i class="ri-twitter-line"></i></a>
-            </div>
+            <h4>Contact</h4>
+            <p>Email: your-email@example.com</p>
         </div>
-        <div class="column">
-            <h4>About</h4>
-            <a href="AboutMe.html">About Me</a>
-            <a href="Blogs.html">Blogs</a>
-            <a href="Partners.html">Partners</a>
-        </div>
-        <div class="column">
-            <h4>Support</h4>
-            <a href="Contact.html">Contact</a>
-            <a href="Terms&Conditions.html">Terms & Conditions</a>
-            <a href="confidentality.html">Privacy Policy</a>
+        <div class="column socials">
+            <h4>Follow Me</h4>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
         </div>
     </footer>
-
-    <div class="copyright">
-        Copyright © 2024 UNWARE STUDIO. All Rights Reserved.
-    </div>
-
  </body>
 </html>
