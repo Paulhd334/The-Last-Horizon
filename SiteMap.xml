@@ -33,6 +33,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+    <url>
+    <loc>https://the-last-horizon.fr/confidentality.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://the-last-horizon.fr/Mention.legales.html</loc>
     <lastmod>2024-11-01</lastmod>
