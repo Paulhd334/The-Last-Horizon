@@ -446,6 +446,7 @@ footer .column > a:hover{
  
    }    
 
+}    
 
     
 
@@ -504,7 +505,7 @@ footer .column > a:hover{
     animation: scaleLogo 3s ease-out; /* Animation de 3s */
     transform-origin: center; /* Définir l'origine de l'échelle au centre de l'image */
    }
- }
+ 
 
 
 
