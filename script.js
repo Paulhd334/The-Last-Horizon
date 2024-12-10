@@ -29,3 +29,13 @@ links.forEach(link => {
         scrollToElement(link.selector, link.instance);
     }, 200)); // Délai de 200ms pour le debounce
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Sélectionne tous les éléments avec les classes "animate-from-left" et "animate-from-right"
+    const elements = document.querySelectorAll(".animate-from-left, .animate-from-right");
+
+    // Supprime la classe "hidden" pour déclencher l'animation
+    elements.forEach((element) => {
+        element.classList.remove("hidden");
+    });
+});
