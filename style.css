@@ -68,18 +68,30 @@ nav{
     width: 70%;
 }
 
-.btn{
+
+.btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background-color: #1e40af;
+    background-color: #034bf1;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Opacité pleine */
+    }
+    50% {
+        opacity: 0.3; /* Réduire l'opacité à 30% */
+    }
+}
+
+
+
+
 .btn:hover{
-    background-color: #1e40af;  
+    background-color:  #034bf1;
 }
 
 .container{
@@ -299,8 +311,8 @@ section .header{
 }
 
 .pricing .card button:hover{
-    background-color: RED;
-    border-color: RED;
+    background-color: #1e40af;
+    border-color: #1e40af;
     
 }
 
@@ -369,6 +381,30 @@ footer .column > a:hover{
     text-align: center;
 }
 
+
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+
+
+  
+  }
+
+
 @media (width < 900px){
     .nav-links{
         display: none;
@@ -388,8 +424,89 @@ footer .column > a:hover{
     footer{
         grid-template-columns: 1fr 200px;
     }
+}
 
-    .wrapper {
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+
+
+ 
+   }    
+
+}    
+
+    
+
+    /* Animation glissant depuis la droite */
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation glissant depuis la gauche */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Appliquer les animations */
+.slide-right {
+    animation: slideInFromRight 1.7s ease-out;
+}
+
+.slide-left {
+    animation: slideInFromLeft 1.7s ease-out;
+}
+
+
+    
+
+/* Animation de mise à l'échelle du logo */
+@keyframes scaleLogo {
+    from {
+        transform: scale(0.01); /* Démarrer très petit */
+        opacity: 0; /* Démarrer invisible */
+        visibility: hidden; /* Le rendre invisible */
+    }
+    to {
+        transform: scale(1); /* Atteindre la taille normale */
+        opacity: 1; /* Devenir totalement visible */
+        visibility: visible; /* Le rendre visible à la fin */
+    }
+}
+
+/* Appliquer l'animation au logo */
+.nav-logo img {
+    animation: scaleLogo 3s ease-out; /* Animation de 3s */
+    transform-origin: center; /* Définir l'origine de l'échelle au centre de l'image */
+   }
+ 
+.wrapper {
         display: none;
         position: fixed;
         bottom: 20px;
@@ -406,5 +523,7 @@ footer .column > a:hover{
       .wrapper.show {
         display: block; 
       }
-    
-}
+
+
+
+
