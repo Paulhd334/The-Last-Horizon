@@ -1,6 +1,8 @@
+/* Importation de la police Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-*{
+/* Réinitialisation des styles par défaut */
+* {
     padding: 0;
     margin: 0;
     outline: none;
@@ -8,23 +10,26 @@
     box-sizing: border-box;
 }
 
-img{
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B;
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+}
+
+/* Images */
+img {
     width: 100%;
     display: flex;
     border-radius: 15px;
 }
 
-a{
-    text-decoration: none;
-}
-
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #18181B;
-    
-}
-
-nav{
+/* Navigation */
+nav {
     max-width: 1200px;
     margin: auto;
     padding: 2rem 1rem;
@@ -32,27 +37,26 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-   
 }
 
-.nav-logo{
+.nav-logo {
     max-width: 220px;
 }
 
-.nav-links{
+.nav-links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 3rem;
 }
 
-.link a{
+.link a {
     position: relative;
     padding-bottom: 0.75rem;
     color: #fff;
 }
 
-.link a::after{
+.link a::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -61,14 +65,13 @@ nav{
     left: 0;
     background-color: #1d4ed8;
     transition: all 0.3s ease;
-    position: center;
 }
 
-.link a:hover::after{
+.link a:hover::after {
     width: 70%;
 }
 
-
+/* Boutons */
 .btn {
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -78,35 +81,26 @@ nav{
     cursor: pointer;
 }
 
-@keyframes blink {
-    0%, 100% {
-        opacity: 1; /* Opacité pleine */
-    }
-    50% {
-        opacity: 0.3; /* Réduire l'opacité à 30% */
-    }
+.btn:hover {
+    background-color: #034bf1;
 }
 
-
-
-
-.btn:hover{
-    background-color:  #034bf1;
-}
-
-.container{
+/* Conteneur principal */
+.container {
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
 }
 
-.blur{
+/* Effet de flou */
+.blur {
     position: absolute;
     box-shadow: 0 0 1000px 50px #1d4ed8;
     z-index: -100;
 }
 
-header{
+/* Header */
+header {
     position: relative;
     padding-top: 2rem;
     display: grid;
@@ -115,42 +109,30 @@ header{
     gap: 2rem;
 }
 
-header .content h4{
+header .content h4,
+header .content p {
     margin-bottom: 1rem;
     color: #ccc;
-    font-size: 1rem;
-    font-weight: 600;
-    position: center;
 }
 
-header .content h1{
+header .content h1 {
     color: #fff;
     margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: 700;
     line-height: 4rem;
-    position: center;
 }
 
-header .content h1 span{
+header .content h1 span {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #fff;
-    position: center;
-      
 }
 
-header .content p{
-    margin-bottom: 2rem;
-    color: #ccc;
-    position: center;
-    
-}
-
-header .image{
+header .image {
     position: relative;
 }
 
-header .image::before{
+header .image::before {
     content: "o";
     position: absolute;
     top: 0;
@@ -164,12 +146,13 @@ header .image::before{
     z-index: -100;
 }
 
-header .image img{
+header .image img {
     max-width: 600px;
     margin: auto;
 }
 
-section .header{
+/* Sections */
+section .header {
     margin-bottom: 1rem;
     color: #fff;
     text-align: center;
@@ -177,29 +160,28 @@ section .header{
     font-weight: 600;
 }
 
-.features{
+/* Features */
+.features {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
-.features .card{
+.features .card {
     background-color: #27272a;
     padding: 1rem;
     border: 2px solid transparent;
     border-radius: 15px;
     transition: all 0.3s ease;
-    position: center;
 }
 
-.features .card:hover{
+.features .card:hover {
     background-color: #323232;
     border-color: #fff;
-     position: center;
 }
 
-.features .card span{
+.features .card span {
     display: inline-block;
     background-color: #1e40af;
     padding: 2px 9px;
@@ -209,44 +191,36 @@ section .header{
     border-radius: 5px;
 }
 
-.features .card h4{
+.features .card h4 {
     margin-bottom: 0.5rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.features .card p{
+.features .card p {
     color: #ccc;
     margin-bottom: 1rem;
-    
 }
 
-.features .card a{
+.features .card a {
     color: #fff;
     transition: all 0.3s ease;
 }
 
-.features .card a:hover{
+.features .card a:hover {
     color: #1e40af;
 }
 
-.sub-header{
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-    color: #ccc;
-}
-
-.pricig{
+/* Pricing */
+.pricing {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    
 }
 
-.pricing .card{
+.pricing .card {
     padding: 3rem 2rem;
     background-color: #27272a;
     display: flex;
@@ -254,92 +228,81 @@ section .header{
     border: 2px solid transparent;
     border-radius: 15px;
     transition: all 0.3s ease;
-    
-    
 }
 
-.pricing .card:hover{
+.pricing .card:hover {
     background-color: #323232;
     border-color: #fff;
-    
 }
 
-.pricing .card .content{
+.pricing .card .content {
     flex: 1;
     margin-bottom: 2rem;
-    position: center;
-    
-    
 }
 
-.pricing .card h4{
+.pricing .card h4 {
     margin-bottom: 1rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 500;
-    
 }
 
-.pricing .card h3{
+.pricing .card h3 {
     color: #fff;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: 600;
     border-bottom: 2px dashed #fff;
-    
 }
 
-.pricing .card p{
+.pricing .card p {
     color: #fff;
     margin-bottom: 0.75rem;
-    
 }
 
-.pricing .card p i{
+.pricing .card p i {
     color: #ccc;
     font-size: 1.2rem;
     margin-right: 0.3rem;
-    
 }
 
-.pricing .card button{
+.pricing .card button {
     color: #fff;
     background-color: transparent;
     border: 2px solid #fff;
-    
 }
 
-.pricing .card button:hover{
+.pricing .card button:hover {
     background-color: #1e40af;
     border-color: #1e40af;
-    
 }
 
-footer{
+/* Footer */
+footer {
     position: relative;
     display: grid;
     grid-template-columns: 400px repeat(3, 1fr);
     gap: 2rem;
 }
 
-footer .column .logo{
+footer .column .logo {
     max-width: 100px;
     margin-bottom: 2rem;
 }
 
-footer .column p{
+footer .column p {
     color: #ccc;
     margin-bottom: 2rem;
 }
 
-footer .column .socials{
+footer .column .socials {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-footer .column .socials a{
+footer .column .socials a {
     color: #ccc;
     border: 1px solid #ccc;
     padding: 5px 10px;
@@ -348,31 +311,31 @@ footer .column .socials a{
     transition: all 0.3s ease;
 }
 
-footer .column .socials a:hover{
+footer .column .socials a:hover {
     color: #fff;
     background-color: #1d4ed8;
     border-color: #1d4ed8;
 }
 
-footer .column h4{
+footer .column h4 {
     color: #fff;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-footer .column > a{
+footer .column > a {
     display: block;
     color: #ccc;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
 
-footer .column > a:hover{
+footer .column > a:hover {
     color: #1d4ed8;
 }
 
-.copyright{
+.copyright {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
@@ -381,131 +344,7 @@ footer .column > a:hover{
     text-align: center;
 }
 
-
-
-@media (width < 600px){
-    header .image::before{
-        display: none;
-    }
-
-    .features{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .pricing{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    footer{
-        grid-template-columns: 1fr 150px;
-    }
-
-
-  
-  }
-
-
-@media (width < 900px){
-    .nav-links{
-        display: none;
-    }
-    header{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    header .image{
-        grid-area: 1/1/2/2;
-    }
-    .features{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .pricing{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    footer{
-        grid-template-columns: 1fr 200px;
-    }
-}
-
-@media (width < 600px){
-    header .image::before{
-        display: none;
-    }
-
-    .features{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .pricing{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    footer{
-        grid-template-columns: 1fr 150px;
-
- 
-   }    
-
-
-    
-
-    /* Animation glissant depuis la droite */
-@keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Animation glissant depuis la gauche */
-@keyframes slideInFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Appliquer les animations */
-.slide-right {
-    animation: slideInFromRight 1.7s ease-out;
-}
-
-.slide-left {
-    animation: slideInFromLeft 1.7s ease-out;
-}
-
-
-    
-
-/* Animation de mise à l'échelle du logo */
-@keyframes scaleLogo {
-    from {
-        transform: scale(0.01); /* Démarrer très petit */
-        opacity: 0; /* Démarrer invisible */
-        visibility: hidden; /* Le rendre invisible */
-    }
-    to {
-        transform: scale(1); /* Atteindre la taille normale */
-        opacity: 1; /* Devenir totalement visible */
-        visibility: visible; /* Le rendre visible à la fin */
-    }
-}
-
-/* Appliquer l'animation au logo */
-.nav-logo img {
-    animation: scaleLogo 3s ease-out; /* Animation de 3s */
-    transform-origin: center; /* Définir l'origine de l'échelle au centre de l'image */
-   }
- 
-
-/* Styles pour les écrans de taille inférieure à 768px */
+/* Media Queries */
 @media (max-width: 768px) {
     nav ul.nav-links {
         flex-direction: column;
@@ -530,129 +369,40 @@ footer .column > a:hover{
         width: 100%;
         text-align: center;
     }
-
-
 }
-  
 
-
-
-/* Style du bouton de menu */
-#menu-button {
-    background-color: #1d4ed8;
-    font-size: 1rem;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin: 10px;
-    border-radius: 5px;
-    display: inline-block;
-  }
-  
-  /* Style du menu */
-  #menu {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 200px;
-    background-color: #333;
-    color: white;
-    border-radius: 5px;
-    padding: 10px 0;
-    transform: translateY(-20px); /* Initialement, le menu est légèrement en dehors de l'écran */
-    opacity: 0; /* Menu invisible */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition fluide pour l'animation */
-    display: none; /* Le menu est caché par défaut */
-  }
-  
-  /* Style de la liste des liens */
-  #menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #menu ul li {
-    padding: 10px;
-    border-bottom: 1px solid #444;
-  }
-  
-  #menu ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-  }
-  
-  #menu ul li:hover {
-    background-color: #555;
-  }
-  
-  /* Menu visible (affiché avec animation) */
-  #menu.visible {
-    display: block; /* Le menu devient visible */
-    transform: translateY(0); /* Menu à sa position normale */
-    opacity: 1; /* Menu opaque */
-  }
-  
-  /* Menu caché (pour l'animation de fermeture) */
-  #menu.hidden {
-    pointer-events: none; /* Empêche les clics sur le menu */
+/* Animations */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
     }
-
-
-
-/* COOOKIE BTN 2025 */
-
-
-
-.wrapper {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: #f9f9f9;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
+    50% {
+        opacity: 0.3;
+    }
 }
 
-.wrapper header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.wrapper .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.button {
-  padding: 8px 16px;
-  background: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.button:hover {
-  background: #45a049;
-}
-
-#declineBtn {
-  background: #e74c3c;
-}
-
-#declineBtn:hover {
-  background: #c0392b;
- }
-}
-
-
+/* Appliquer les animations */
+.slide-right {
+    animation: slideInFrom
