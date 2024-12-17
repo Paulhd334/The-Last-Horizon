@@ -405,4 +405,9 @@ footer .column > a:hover {
 
 /* Appliquer les animations */
 .slide-right {
-    animation: slideInFrom
+    animation: slideInFromRight 0.5s ease-out;
+}
+
+.slide-left {
+    animation: slideInFromLeft 0.5s ease-out;
+}
