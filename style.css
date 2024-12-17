@@ -602,4 +602,31 @@ footer .column > a:hover{
     pointer-events: none; /* Empêche les clics sur le menu */
     }
 
+.wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.wrapper .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
 
