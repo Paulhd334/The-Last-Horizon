@@ -506,8 +506,7 @@ footer .column > a:hover{
     transform-origin: center; /* Définir l'origine de l'échelle au centre de l'image */
    }
  
-
-    .wrapper {
+.wrapper {
         display: none;
         position: fixed;
         bottom: 20px;
@@ -525,6 +524,6 @@ footer .column > a:hover{
         display: block; 
       }
 
- }
+
 
 
