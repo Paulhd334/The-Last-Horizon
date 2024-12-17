@@ -73,7 +73,7 @@ nav{
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background-color: #034bf1;
+    background-color: red;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -506,24 +506,100 @@ footer .column > a:hover{
     transform-origin: center; /* Définir l'origine de l'échelle au centre de l'image */
    }
  
-.wrapper {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        background: #f9f9f9;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        z-index: 9999;
-      }
-      
-      .wrapper.show {
-        display: block; 
-      }
+
+/* Styles pour les écrans de taille inférieure à 768px */
+@media (max-width: 768px) {
+    nav ul.nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.nav-links li {
+        margin: 10px 0;
+    }
+
+    .container header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features .card, .pricing .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    footer .column {
+        width: 100%;
+        text-align: center;
+    }
 
 
+}
+  
+
+
+
+/* Style du bouton de menu */
+#menu-button {
+    background-color: #1d4ed8;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  /* Style du menu */
+  #menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 0;
+    transform: translateY(-20px); /* Initialement, le menu est légèrement en dehors de l'écran */
+    opacity: 0; /* Menu invisible */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition fluide pour l'animation */
+    display: none; /* Le menu est caché par défaut */
+  }
+  
+  /* Style de la liste des liens */
+  #menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+  }
+  
+  #menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  #menu ul li:hover {
+    background-color: #555;
+  }
+  
+  /* Menu visible (affiché avec animation) */
+  #menu.visible {
+    display: block; /* Le menu devient visible */
+    transform: translateY(0); /* Menu à sa position normale */
+    opacity: 1; /* Menu opaque */
+  }
+  
+  /* Menu caché (pour l'animation de fermeture) */
+  #menu.hidden {
+    pointer-events: none; /* Empêche les clics sur le menu */
+    }
 
 
