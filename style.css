@@ -1,8 +1,6 @@
-/* Importation de la police Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* Réinitialisation des styles par défaut */
-* {
+*{
     padding: 0;
     margin: 0;
     outline: none;
@@ -10,117 +8,403 @@
     box-sizing: border-box;
 }
 
-/* Styles généraux */
-body {
+img{
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
     font-family: 'Poppins', sans-serif;
     background-color: #18181B;
-    color: #fff;
+    
 }
 
-/* Wrapper du consentement */
-.wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-/* Activer le wrapper (quand accepté ou refusé) */
-.wrapper.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Conteneur de l'interface de consentement */
-.wrapper header {
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.wrapper header .bx {
-    font-size: 2.5rem;
-    color: #1d4ed8;
-}
-
-.wrapper h2 {
-    font-size: 1.75rem;
-    color: #fff;
-}
-
-/* Section de données */
-.data {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 1rem;
-    color: #ccc;
-}
-
-.data a {
-    color: #1d4ed8;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.data a:hover {
-    color: #fff;
-}
-
-/* Boutons */
-.buttons {
-    margin-top: 2rem;
-    display: flex;
+    justify-content: space-between;
     gap: 2rem;
-    justify-content: center;
+   
 }
 
-.buttons .button {
-    padding: 0.75rem 2rem;
+.nav-logo{
+    max-width: 220px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+    position: center;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
     background-color: #1d4ed8;
     border-radius: 5px;
     cursor: pointer;
-    border: none;
     transition: all 0.3s ease;
 }
 
-.buttons .button:hover {
-    background-color: #034bf1;
+.btn:hover{
+    background-color: #1e40af;
 }
 
-.buttons .button#declineBtn {
-    background-color: #f44336;
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
 }
 
-.buttons .button#declineBtn:hover {
-    background-color: #e53935;
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .wrapper header {
-        flex-direction: column;
-        align-items: center;
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+    position: center;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    position: center;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    position: center;
+      
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+    position: center;
+    
+}
+
+header .image{
+    position: relative;
+}
+
+header .image::before{
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: center;
+}
+
+.features .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+     position: center;
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+    
+}
+
+.features .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.features .card a:hover{
+    color: #1e40af;
+}
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+.pricig{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    
+}
+
+.pricing .card{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    
+    
+}
+
+.pricing .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+    
+}
+
+.pricing .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+    position: center;
+    
+    
+}
+
+.pricing .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+}
+
+.pricing .card h3{
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff;
+    
+}
+
+.pricing .card p{
+    color: #fff;
+    margin-bottom: 0.75rem;
+    
+}
+
+.pricing .card p i{
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+    
+}
+
+.pricing .card button{
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    
+}
+
+.pricing .card button:hover{
+    background-color: RED;
+    border-color: RED;
+    
+}
+
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+
+footer .column .logo{
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p{
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a{
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover{
+    color: #fff;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+footer .column h4{
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a{
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover{
+    color: #1d4ed8;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .features{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
     }
 
-    .data {
-        font-size: 0.9rem;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
+    .wrapper {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: #f9f9f9;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+      }
+      
+      .wrapper.show {
+        display: block; 
+      }
+    
 }
