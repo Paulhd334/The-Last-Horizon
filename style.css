@@ -442,11 +442,9 @@ footer .column > a:hover{
     footer{
         grid-template-columns: 1fr 150px;
 
-
  
    }    
 
-}    
 
     
 
@@ -654,12 +652,7 @@ footer .column > a:hover{
 
 #declineBtn:hover {
   background: #c0392b;
+ }
 }
-
-
-
-
-
-
 
 
