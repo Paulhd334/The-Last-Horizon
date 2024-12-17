@@ -1,37 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-/* Animation d'entrée de la page */
+/* General page styling */
 body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
   animation: fadeInZoom 1s ease-in-out;
 }
 
-@keyframes fadeInZoom {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+/* Wrapper for the maintenance message */
+.wrapper {
+  background-color: #1e1e1e;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+  animation: pulseGlow 2s infinite;
 }
 
-/* Texte clignotant progressif */
+/* Header title styling */
 h1 {
+  font-size: 3rem;
+  color: red;
+  margin-bottom: 10px;
   animation: smoothBlink 1.5s infinite;
 }
 
-@keyframes smoothBlink {
-  0%, 100% {
-    color: red;
-    opacity: 1;
-  }
-  50% {
-    color: #ff4d4d;
-    opacity: 0.5;
-  }
+/* Paragraph styling */
+p {
+  font-size: 1.2rem;
+  color: #ccc;
 }
 
-/* Barre de chargement fictive */
+/* Loading bar */
 .loading-bar {
   width: 100%;
   height: 8px;
@@ -51,11 +57,46 @@ h1 {
   animation: loadingAnimation 2s infinite linear;
 }
 
+/* Keyframe animations */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes smoothBlink {
+  0%, 100% {
+    color: red;
+    opacity: 1;
+  }
+  50% {
+    color: #ff4d4d;
+    opacity: 0.5;
+  }
+}
+
 @keyframes loadingAnimation {
   0% {
     left: -50%;
   }
   100% {
     left: 100%;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
   }
 }
