@@ -72,14 +72,14 @@ nav{
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
-    background-color: red;
+    background-color: #1e40af;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .btn:hover{
-    background-color: #1e40af;
+    background-color: #1e40af;  
 }
 
 .container{
