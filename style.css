@@ -507,7 +507,24 @@ footer .column > a:hover{
    }
  
 
+    .wrapper {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: #f9f9f9;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+      }
+      
+      .wrapper.show {
+        display: block; 
+      }
 
-
+ }
 
 
