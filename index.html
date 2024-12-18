@@ -99,27 +99,111 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 
-   <!------------------ COOKIE CONSENT BOX (RGPD Ready) ------------------------------->
-    
-   <div class="wrapper">
-    <header>
-      <i class="bx bx-cookie"></i> <!-- Icône de cookie -->
-      <h2>Cookies Consent</h2>
-    </header>
 
-    <div class="data">
-      <p>
-        This website uses cookies to ensure you have a superior and relevant browsing experience. 
-        <a href="cookies.html" target="_blank" rel="noopener noreferrer">Read more...</a>
-      </p>
-    </div>
 
-    <div class="buttons">
-      <button class="button" id="acceptBtn">Accept</button>
-      <button class="button" id="declineBtn">Decline</button>
-    </div>
+
+  
+
+  <!------------------ COOKIE CONSENT BOX (RGPD Ready) ------------------------------->
+
+<div class="wrapper">
+  <header>
+    <i class="bx bx-cookie"></i> <!-- Icône de cookie -->
+    <h2>Cookies Consent</h2>
+  </header>
+
+  <div class="data">
+    <p>
+      This website uses cookies to ensure you have a superior and relevant browsing experience.
+      <a href="cookies.html" target="_blank" rel="noopener noreferrer">Read more...</a>
+    </p>
   </div>
 
+  <div class="buttons">
+    <button class="button" id="acceptBtn">Accept</button>
+    <button class="button" id="declineBtn">Decline</button>
+  </div>
+</div>
+
+<script>
+  // Vérification du consentement des cookies
+  const acceptButton = document.getElementById('acceptBtn');
+  const declineButton = document.getElementById('declineBtn');
+
+  // Fonction pour activer Google Analytics et la publicité
+  function enableAnalytics() {
+    // Consentement pour Google Analytics (mesure du trafic et de l'engagement)
+    localStorage.setItem('cookieConsent', 'accepted');
+    
+    // Activer Google Analytics ici (si consentement accepté)
+    // Exemple d'intégration : ajout du script de Google Analytics
+    let script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP'; // ID GA4 
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'YOUR_GA_ID', {
+        'anonymize_ip': true, // Anonymisation de l'IP pour plus de confidentialité
+        'cookie_flags': 'SameSite=None; Secure' // Pour garantir la conformité RGPD
+      });
+    };
+    
+    // Envoi des signaux de consentement pour Analytics
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+  }
+
+  // Fonction pour refuser les cookies
+  function disableAnalytics() {
+    localStorage.setItem('cookieConsent', 'declined');
+
+    // Envoi des signaux de consentement pour Analytics
+    gtag('consent', 'update', {
+      'analytics_storage': 'denied'
+    });
+  }
+
+  // Gestion des actions des boutons
+  acceptButton.addEventListener('click', function () {
+    enableAnalytics();
+    document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte après consentement
+  });
+
+  declineButton.addEventListener('click', function () {
+    disableAnalytics();
+    document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte après refus
+  });
+
+  // Vérifier si le consentement a déjà été donné
+  if (localStorage.getItem('cookieConsent') === 'accepted') {
+    enableAnalytics();
+    document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte si déjà accepté
+  } else if (localStorage.getItem('cookieConsent') === 'declined') {
+    disableAnalytics();
+    document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte si déjà refusé
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -311,21 +395,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 
-  
 
-<script>
-    // Vérifie si le cookie de consentement existe
-    if (!localStorage.getItem('cookie-consent')) {
-        document.getElementById('cookie-banner').style.display = 'block';
-    }
-
-    // Lorsque l'utilisateur accepte les cookies
-    document.getElementById('accept-cookies').addEventListener('click', function() {
-        // Enregistre le consentement dans le localStorage pour éviter de le redemander
-        localStorage.setItem('cookie-consent', 'true');
-        // Cache la barre de consentement
-        document.getElementById('cookie-banner').style.display = 'none';
-    });
-  </script>
  </body>
 </html>
