@@ -11,6 +11,49 @@
   gtag('config', 'G-3SR1TYY3HP');
 </script>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+
+  gtag('config', 'G-3SR1TYY3HP');
+  </script>
+
+  <script>
+  // Consentement complet
+  function acceptAllCookies() {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+
+  // Refuser tous les cookies
+  function rejectAllCookies() {
+    gtag('consent', 'update', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+  }
+</script>
+
+
+  
+
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
@@ -79,6 +122,24 @@
   </div>
 
 
+
+<div id="cookie-banner">
+  <p>Nous utilisons des cookies pour améliorer votre expérience. Acceptez-vous les cookies ?</p>
+  <button onclick="acceptAllCookies(); document.getElementById('cookie-banner').style.display='none';">Accepter</button>
+  <button onclick="rejectAllCookies(); document.getElementById('cookie-banner').style.display='none';">Refuser</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
 
     <nav>
         <div class="nav-logo">
