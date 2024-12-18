@@ -1,82 +1,139 @@
-/* Google Fonts - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
+/* Cookie Consent Wrapper */
 .wrapper {
   position: fixed;
-  bottom: 50px;
-  right: -370px;
+  bottom: 20px;
+  right: -400px;
   max-width: 345px;
-  width: 100%;
+  width: 90%;
   background: #323232;
   border-radius: 8px;
-  padding: 15px 25px 22px;
-  transition: right 0.3s ease;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  padding: 15px 20px;
+  transition: right 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  overflow: hidden;
 }
+
 .wrapper.show {
   right: 20px;
 }
+
+/* Header */
 .wrapper header {
   display: flex;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 10px;
 }
+
 header i {
   color: #4070f4;
   font-size: 32px;
 }
+
 header h2 {
-  color: #4070f4;
+  color: #ffffff;
   font-weight: 500;
+  font-size: 20px;
 }
+
+/* Content Text */
 .wrapper .data {
-  margin-top: 16px;
+  margin-top: 15px;
 }
+
 .wrapper .data p {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.6;
 }
+
 .data p a {
   color: #4070f4;
   text-decoration: none;
 }
+
 .data p a:hover {
   text-decoration: underline;
 }
+
+/* Buttons */
 .wrapper .buttons {
-  margin-top: 16px;
-  width: 100%;
+  margin-top: 15px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
+
 .buttons .button {
   border: none;
-  color: #fff;
+  color: white;
   padding: 8px 0;
   border-radius: 4px;
   background: #4070f4;
   cursor: pointer;
-  width: calc(100% / 2 - 10px);
-  transition: all 0.2s ease;
+  width: 48%;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
+
 .buttons #acceptBtn:hover {
   background-color: #034bf1;
 }
+
 #declineBtn {
-  border: 2px solid fff;
   background-color: #fff;
-  color: red;
+  color: #ff4d4d;
+  border: 2px solid #ff4d4d;
 }
+
 #declineBtn:hover {
-  background-color: red;
+  background-color: #ff4d4d;
   color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .wrapper {
+    max-width: 95%;
+    right: -100%;
+  }
+
+  .wrapper.show {
+    right: 5%;
+  }
+
+  header h2 {
+    font-size: 18px;
+  }
+
+  .data p {
+    font-size: 12px;
+  }
+
+  .buttons .button {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  .wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: -400px; /* Hors de l'écran par défaut */
+    max-width: 345px;
+    width: 90%;
+    background: #323232;
+    border-radius: 8px;
+    padding: 15px 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  .wrapper.show {
+    right: 20px; /* Position visible */
+  }
+  
 }
