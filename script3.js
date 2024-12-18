@@ -1,10 +1,24 @@
-const cookieBox = document.querySelector(".wrapper"),
-  buttons = document.querySelectorAll(".button");
+// Sélectionne la boîte de consentement
+const cookieBox = document.querySelector(".wrapper");
 
-// Fonction pour charger Google Analytics
+// Détecte si un consentement a déjà été donné
+window.addEventListener("load", () => {
+  const consent = getCookie("cookieConsent");
+  if (consent === "accepted") {
+    loadGoogleAnalytics(); // Charger Google Analytics si accepté
+  } else if (consent === "declined") {
+    console.log("User has declined cookies."); // Ne rien faire si refusé
+  } else {
+    setTimeout(() => {
+      cookieBox.classList.add("show"); // Affiche la boîte
+    }, 500);
+  }
+});
+
+// Charge Google Analytics uniquement si accepté
 const loadGoogleAnalytics = () => {
   const script = document.createElement("script");
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP";
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
   script.async = true;
   document.head.appendChild(script);
 
@@ -14,39 +28,30 @@ const loadGoogleAnalytics = () => {
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-    gtag("config", "G-3SR1TYY3HP"); 
+    gtag("config", "G-XXXXXXXXXX"); // Remplacez par votre ID Analytics
   };
 };
 
-// Fonction principale pour gérer les cookies
-const executeCodes = () => {
-  // Vérifie si un cookie existe déjà
-  if (document.cookie.includes("cookieConsent")) return;
+// Gère le clic sur le bouton "Accept"
+document.getElementById("acceptBtn").addEventListener("click", () => {
+  document.cookie = "cookieConsent=accepted; max-age=" + 60 * 60 * 24 * 30; // Stocke le consentement pendant 30 jours
+  cookieBox.classList.remove("show");
+  loadGoogleAnalytics(); // Charger Google Analytics
+});
 
-  // Affiche la fenêtre des cookies
-  cookieBox.classList.add("show");
+// Gère le clic sur le bouton "Decline"
+document.getElementById("declineBtn").addEventListener("click", () => {
+  document.cookie = "cookieConsent=declined; max-age=" + 60 * 60 * 24 * 30; // Stocke le refus pendant 30 jours
+  cookieBox.classList.remove("show");
+  console.log("Cookies declined. No data will be collected.");
+});
 
-  // Ajoute des événements aux boutons
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      cookieBox.classList.remove("show");
-
-      if (button.id === "acceptBtn") {
-        // Accepter les cookies : définir le cookie pour 30 jours
-        document.cookie = "cookieConsent=accepted; max-age=" + 60 * 60 * 24 * 30;
-        loadGoogleAnalytics(); // Charger Google Analytics
-      } else if (button.id === "declineBtn") {
-        // Refuser les cookies
-        document.cookie = "cookieConsent=declined; max-age=" + 60 * 60 * 24 * 30;
-      }
-    });
-  });
-};
-
-// Vérifie si l'utilisateur a déjà accepté les cookies
-if (document.cookie.includes("cookieConsent=accepted")) {
-  loadGoogleAnalytics();
+// Fonction pour lire un cookie
+function getCookie(name) {
+  const cookies = document.cookie.split("; ");
+  for (let i = 0; i < cookies.length; i++) {
+    const [key, value] = cookies[i].split("=");
+    if (key === name) return value;
+  }
+  return null;
 }
-
-// Exécute la fonction au chargement de la page
-window.addEventListener("load", executeCodes);
