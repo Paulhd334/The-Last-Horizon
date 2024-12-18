@@ -12,45 +12,9 @@
 </script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  gtag('js', new Date());
-
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
-  });
-
-  gtag('config', 'G-3SR1TYY3HP');
-  </script>
-
-  <script>
-  // Consentement complet
-  function acceptAllCookies() {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
-
-  // Refuser tous les cookies
-  function rejectAllCookies() {
-    gtag('consent', 'update', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied'
-    });
-  }
-</script>
 
 
+  
 
 
 
@@ -339,5 +303,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <script src="script.js"></script>
 
+
+  <!-- Barre de consentement aux cookies -->
+<div id="cookie-banner" style="background: #1d4ed8; color: white; padding: 10px 20px; text-align: center; position: fixed; bottom: 0; width: 100%; display: none;">
+    <p>Nous utilisons des cookies pour améliorer votre expérience. En poursuivant votre navigation, vous acceptez notre <a href="/politique-de-cookies" style="color: white; text-decoration: underline;">politique de cookies</a>.</p>
+    <button id="accept-cookies" style="background: #fff; color: #1d4ed8; padding: 10px 20px; border: none; cursor: pointer;">Accepter</button>
+</div>
+
+
+  
+
+<script>
+    // Vérifie si le cookie de consentement existe
+    if (!localStorage.getItem('cookie-consent')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    // Lorsque l'utilisateur accepte les cookies
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        // Enregistre le consentement dans le localStorage pour éviter de le redemander
+        localStorage.setItem('cookie-consent', 'true');
+        // Cache la barre de consentement
+        document.getElementById('cookie-banner').style.display = 'none';
+    });
+  </script>
  </body>
 </html>
