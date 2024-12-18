@@ -81,4 +81,71 @@ p {
     100% {
         color: #f1faee;
     }
+
+
+    /* Cookies consent box */
+.wrapper {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Header styling for the cookie box */
+.wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.wrapper header h2 {
+  color: red;
+  font-size: 1.8rem;
+  animation: smoothBlink 1.5s infinite;
+}
+
+/* Data paragraph styling */
+.wrapper .data p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.wrapper .data a {
+  color: red;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.wrapper .data a:hover {
+  color: #ff4d4d;
+}
+
+/* Buttons styling */
+.wrapper .buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.wrapper .button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.wrapper .button:hover {
+  background: #ff4d4d;
+  }
 }
