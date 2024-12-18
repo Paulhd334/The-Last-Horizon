@@ -132,13 +132,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   // Fonction pour activer Google Analytics et la publicité
   function enableAnalytics() {
-    // Consentement pour Google Analytics (mesure du trafic et de l'engagement)
     localStorage.setItem('cookieConsent', 'accepted');
     
     // Activer Google Analytics ici (si consentement accepté)
-    // Exemple d'intégration : ajout du script de Google Analytics
     let script = document.createElement('script');
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP'; // ID GA4 
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP';  ID
     script.async = true;
     document.head.appendChild(script);
 
@@ -152,21 +150,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'anonymize_ip': true, // Anonymisation de l'IP pour plus de confidentialité
         'cookie_flags': 'SameSite=None; Secure' // Pour garantir la conformité RGPD
       });
+
+      // Envoi des signaux de consentement pour Analytics et Publicité
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted', // Consentement pour l'analyse
+        'ad_storage': 'granted',        // Consentement pour les cookies publicitaires
+        'ad_user_data': 'granted',      // Consentement pour les données utilisateur publicitaires
+        'ad_personalization': 'granted' // Consentement pour la personnalisation des annonces
+      });
     };
-    
-    // Envoi des signaux de consentement pour Analytics
-    gtag('consent', 'update', {
-      'analytics_storage': 'granted'
-    });
   }
 
   // Fonction pour refuser les cookies
   function disableAnalytics() {
     localStorage.setItem('cookieConsent', 'declined');
 
-    // Envoi des signaux de consentement pour Analytics
+    // Envoi des signaux de consentement pour Analytics et Publicité
     gtag('consent', 'update', {
-      'analytics_storage': 'denied'
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
     });
   }
 
@@ -190,6 +194,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte si déjà refusé
   }
 </script>
+
 
 
 
