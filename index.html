@@ -6,19 +6,24 @@
     <title>Site en maintenance</title>
     <link rel="stylesheet" href="style.css">
 
-    
     <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  
+  // Configuration par défaut du consentement
   gtag('consent', 'default', {
-    'ad_storage': 'denied', // Pas de cookies publicitaires
-    'analytics_storage': 'denied', // Pas de cookies analytiques
-    'functionality_storage': 'denied',
+    'ad_storage': 'denied',          // Pas de stockage publicitaire
+    'analytics_storage': 'denied',   // Pas de stockage analytique
     'personalization_storage': 'denied',
-    'security_storage': 'granted' // Pour des fonctions essentielles
+    'security_storage': 'granted'    // Stockage minimal pour la sécurité
   });
-  gtag('set', 'ads_data_redaction', true); // Désactive les données publicitaires
+
+  // Chargement de Google Analytics (si utilisé)
+  gtag('js', new Date());
+  gtag('config', '430228563'); //
 </script>
+
+
 
 </head>
 <body>
