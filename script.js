@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
 // Charge Google Analytics uniquement si accepté
 const loadGoogleAnalytics = () => {
   const script = document.createElement("script");
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP";
   script.async = true;
   document.head.appendChild(script);
 
@@ -28,7 +28,7 @@ const loadGoogleAnalytics = () => {
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-    gtag("config", "G-XXXXXXXXXX"); // Remplacez par votre ID Analytics
+    gtag("config", "G-3SR1TYY3HP"); 
   };
 };
 
@@ -54,4 +54,16 @@ function getCookie(name) {
     if (key === name) return value;
   }
   return null;
+}
+
+if (localStorage.getItem('cookie-consent') === 'true') {
+    // Charger Google Analytics ou autres services tiers
+    // Exemple pour Google Analytics :
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'G-3SR1TYY3HP', 'auto');
+    ga('send', 'pageview');
 }
