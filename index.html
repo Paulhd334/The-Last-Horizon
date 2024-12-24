@@ -100,150 +100,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body>
 
   
-    <header class="container">
-        <div class="content">
-            <span class="blur"></span>
-            <span class="blur"></span>
-            <h4></h4>
-            <H1>THE LAST HORIZON  2024 <span>ON STEAM</span></H1>
-            <p>
-                A Unreal Engine 5 Game.
-            <p>
-               
-            </p>
-            <button class="btn">Trailer Soon</button>
+
+    <!------------------------------------COOKIE-------------------------------------------------->
+
+   
+    <div class="wrapper">
+        <header>
+          <i class="bx bx-cookie"></i>
+          <h2>Cookies Consent</h2>
+        </header>
+  
+        <div class="data">
+          <p>This website use cookies to help you have a superior and more relevant browsing experience on the website. <a href="cookie.html"> Read more...</a></p>
         </div>
-        <div class="imge">
-            <img src="images/THE-LAST-HORIZON.png">
+  
+        <div class="buttons">
+          <button class="button" id="acceptBtn">Accept</button>
+          <button class="button" id="declineBtn">Decline</button>
         </div>
-    </header>
-
-
-
-
-  
-
-  <!------------------ COOKIE CONSENT BOX (RGPD Ready) ------------------------------->
-
-<div class="wrapper">
-  <header>
-    <i class="bx bx-cookie"></i> <!-- Icône de cookie -->
-    <h2>Cookies Consent</h2>
-  </header>
-
-  <div class="data">
-    <p>
-      This website uses cookies to ensure you have a superior and relevant browsing experience.
-      <a href="cookies.html" target="_blank" rel="noopener noreferrer">Read more...</a>
-    </p>
-  </div>
-
-  <div class="buttons">
-    <button class="button" id="acceptBtn">Accept</button>
-    <button class="button" id="declineBtn">Decline</button>
-  </div>
-</div>
-
-<script>
-  // Vérification du consentement des cookies
-  const acceptButton = document.getElementById('acceptBtn');
-  const declineButton = document.getElementById('declineBtn');
-
-  // Fonction pour activer Google Analytics et la publicité
-  function enableAnalytics() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    
-    // Activer Google Analytics ici (si consentement accepté)
-    let script = document.createElement('script');
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP';  ID
-    script.async = true;
-    document.head.appendChild(script);
-
-    script.onload = function () {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'YOUR_GA_ID', {
-        'anonymize_ip': true, // Anonymisation de l'IP pour plus de confidentialité
-        'cookie_flags': 'SameSite=None; Secure' // Pour garantir la conformité RGPD
-      });
-
-      // Envoi des signaux de consentement pour Analytics et Publicité
-      gtag('consent', 'update', {
-        'analytics_storage': 'granted', // Consentement pour l'analyse
-        'ad_storage': 'granted',        // Consentement pour les cookies publicitaires
-        'ad_user_data': 'granted',      // Consentement pour les données utilisateur publicitaires
-        'ad_personalization': 'granted' // Consentement pour la personnalisation des annonces
-      });
-    };
-  }
-
-  // Fonction pour refuser les cookies
-  function disableAnalytics() {
-    localStorage.setItem('cookieConsent', 'declined');
-
-    // Envoi des signaux de consentement pour Analytics et Publicité
-    gtag('consent', 'update', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
-    });
-  }
-
-  // Gestion des actions des boutons
-  acceptButton.addEventListener('click', function () {
-    enableAnalytics();
-    document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte après consentement
-  });
-
-  declineButton.addEventListener('click', function () {
-    disableAnalytics();
-    document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte après refus
-  });
-
-  // Vérifier si le consentement a déjà été donné
-  if (localStorage.getItem('cookieConsent') === 'accepted') {
-    enableAnalytics();
-    document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte si déjà accepté
-  } else if (localStorage.getItem('cookieConsent') === 'declined') {
-    disableAnalytics();
-    document.querySelector('.wrapper').style.display = 'none'; // Masquer la boîte si déjà refusé
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MSH49N7K'); 
-  </script>
-
-
-  
+      </div>
 
     <nav>
         <div class="nav-logo">
-            <a href="#">
-                <img src="images/UNWARE-STUDIO.png" alt="Logo de Unware Studio">
+            <a href="index.html">
+                <img src="images/UNWARE_STUDIO-NO-BACKGROUNG.png">
             </a>
         </div>
 
@@ -259,7 +139,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <button class="tn"><a href="Contact.html"></a></button>
     </nav>
 
-    
+    <header class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h4></h4>
+            <H1>THE LAST HORIZON  2024 <span>ON STEAM</span></H1>
+            <p>
+                A Unreal Engine 5 Game.
+            <p>
+               
+            </p>
+            <button class="btn">Trailer Soon</button>
+        </div>
+        <div class="imge">
+            <img src="images/THE LAST HORIZON.png">
+        </div>
+    </header>
 
 
 
