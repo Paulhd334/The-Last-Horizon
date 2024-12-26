@@ -442,5 +442,6 @@ header, .features, .pricing, footer {
     width: 100%;
     display: flex;
     border-radius: 15px;
+    position: relative;
  }
 }
