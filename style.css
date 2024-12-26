@@ -438,4 +438,12 @@ header, .features, .pricing, footer {
         animation: none; /* Pas d'animation sur les cartes */
     }
   }
+
+
+    .imge {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100vh; /* Hauteur de la fenêtre */
+ }
 }
