@@ -437,13 +437,10 @@ header, .features, .pricing, footer {
         opacity: 1;
         animation: none; /* Pas d'animation sur les cartes */
     }
-  }
-
-
+  
     .imge {
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    height: 100vh; /* Hauteur de la fenêtre */
+    border-radius: 15px;
  }
 }
