@@ -32,19 +32,21 @@ const loadGoogleAnalytics = () => {
 
 // Fonction pour gérer les signaux de consentement
 const loadAnalytics = (consent) => {
-  if (consent === 'accepted') {
-    // Mettre à jour le consentement pour Google Analytics
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'analytics_storage': 'granted'
-    });
-    loadGoogleAnalytics(); // Charger Google Analytics si accepté
-  } else {
-    // Refuser le consentement pour Google Analytics
-    gtag('consent', 'update', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied'
-    });
+  if (typeof gtag !== 'undefined') {
+    if (consent === 'accepted') {
+      // Mettre à jour le consentement pour Google Analytics
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+      loadGoogleAnalytics(); // Charger Google Analytics si accepté
+    } else {
+      // Refuser le consentement pour Google Analytics
+      gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+      });
+    }
   }
 };
 
