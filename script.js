@@ -24,7 +24,10 @@ const loadGoogleAnalytics = () => {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-3SR1TYY3HP");
+      gtag("config", "G-3SR1TYY3HP", {
+        'anonymize_ip': true, // Anonymiser l'IP
+        'send_page_view': false // Ne pas envoyer de page vue avant le consentement
+      });
       window.gaLoaded = true; // Empêche un double chargement
     };
   }
