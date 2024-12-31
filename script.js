@@ -42,12 +42,14 @@ window.addEventListener("load", () => {
 
 // Gérer les boutons
 document.getElementById("acceptBtn").addEventListener("click", () => {
+  // Sauvegarder le consentement dans un cookie
   document.cookie = "cookieConsent=accepted; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
   cookieBox.classList.remove("show");
   loadGoogleAnalytics();
 });
 
 document.getElementById("declineBtn").addEventListener("click", () => {
+  // Sauvegarder le refus dans un cookie
   document.cookie = "cookieConsent=declined; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
   cookieBox.classList.remove("show");
   console.log("Cookies declined. No data will be collected.");
