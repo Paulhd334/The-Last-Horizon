@@ -30,27 +30,44 @@ const loadGoogleAnalytics = () => {
   }
 };
 
+// Fonction pour gérer les signaux de consentement
+const loadAnalytics = (consent) => {
+  if (consent === 'accepted') {
+    // Mettre à jour le consentement pour Google Analytics
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'analytics_storage': 'granted'
+    });
+    loadGoogleAnalytics(); // Charger Google Analytics si accepté
+  } else {
+    // Refuser le consentement pour Google Analytics
+    gtag('consent', 'update', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+  }
+};
+
 // Gérer le consentement
 window.addEventListener("load", () => {
   const consent = getCookie("cookieConsent");
   if (consent === "accepted") {
-    loadGoogleAnalytics();
+    loadGoogleAnalytics(); // Si accepté, charger Google Analytics
   } else if (!consent) {
-    setTimeout(() => cookieBox.classList.add("show"), 500);
+    setTimeout(() => cookieBox.classList.add("show"), 500); // Afficher la bannière si aucun consentement
   }
 });
 
-// Gérer les boutons
-document.getElementById("acceptBtn").addEventListener("click", () => {
-  // Sauvegarder le consentement dans un cookie
-  document.cookie = "cookieConsent=accepted; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
-  cookieBox.classList.remove("show");
-  loadGoogleAnalytics();
+document.getElementById("acceptBtn").addEventListener("click", function() {
+    // Accepter les cookies et envoyer le signal de consentement
+    document.cookie = "cookieConsent=accepted; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
+    loadAnalytics('accepted');
+    cookieBox.classList.remove("show"); // Fermer la bannière
 });
 
-document.getElementById("declineBtn").addEventListener("click", () => {
-  // Sauvegarder le refus dans un cookie
-  document.cookie = "cookieConsent=declined; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
-  cookieBox.classList.remove("show");
-  console.log("Cookies declined. No data will be collected.");
+document.getElementById("declineBtn").addEventListener("click", function() {
+    // Refuser les cookies et ne pas collecter de données
+    document.cookie = "cookieConsent=declined; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
+    loadAnalytics('denied');
+    cookieBox.classList.remove("show"); // Fermer la bannière
 });
