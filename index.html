@@ -11,6 +11,12 @@
     <title>The Last Horizon</title>
     <link rel="icon" href="images/UNWARE-STUDIO.png" type="image/x-icon">
     <meta name="description" content="The Last Horizon by UNWARE STUDIO">
+    <script>
+  if (window.location.pathname.endsWith("index.html")) {
+    window.location.replace(window.location.origin + "/");
+  }
+    </script>
+
 
     <script>
 // Charge Google Tag Manager uniquement si le consentement est accepté
@@ -44,25 +50,21 @@ if (consent === 'accepted') {
 </head>
 <body>
 
-    <!------------------------------------COOKIE-------------------------------------------------->
-
-   
+    <!------------------------------------COOKIE 2025 -------------------------------------------------->
     <div class="wrapper">
         <header>
-          <i class="bx bx-cookie"></i>
-          <h2>Cookies Consent</h2>
+            <i class="bx bx-cookie"></i>
+            <h2>Cookies Consent</h2>
         </header>
-  
         <div class="data">
-          <p>This website use cookies to help you have a superior and more relevant browsing experience on the website. <a href="cookie.html"> Read more...</a></p>
+            <p>This website uses cookies to help you have a superior and more relevant browsing experience on the website. <a href="cookie.html">Read more...</a></p>
         </div>
-  
         <div class="buttons">
-          <button class="button" id="acceptBtn">Accept</button>
-          <button class="button" id="declineBtn">Decline</button>
+            <button class="button" id="acceptBtn">Accept</button>
+            <button class="button" id="declineBtn">Decline</button>
         </div>
-      </div>
-
+    </div>
+    <!------------------------------------COOKIE END -------------------------------------------------->
     <nav>
         <div class="nav-logo">
             <a href="index.html">
