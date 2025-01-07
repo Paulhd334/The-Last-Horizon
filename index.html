@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3SR1TYY3HP');
-</script>
-    
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Horizon</title>
+    <meta name="description" content="The Last Horizon by UNWARE STUDIO">
+    <link rel="icon" href="images/UNWARE-STUDIO.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cookie.css">
-    <title>The Last Horizon</title>
-    <link rel="icon" href="images/UNWARE-STUDIO.png" type="image/x-icon">
-    <meta name="description" content="The Last Horizon by UNWARE STUDIO">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SR1TYY3HP"></script>
     <script>
-  if (window.location.pathname.endsWith("index.html")) {
-    window.location.replace(window.location.origin + "/");
-  }
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3SR1TYY3HP', { 'send_page_view': false }); // Désactive le suivi par défaut
     </script>
 
-
+    <!-- Gestion du consentement -->
     <script>
-// Charge Google Tag Manager uniquement si le consentement est accepté
-function loadAnalytics(consent) {
-    if (consent === 'accepted') {
-        // Mode consentement activé pour Google Analytics
-        gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'analytics_storage': 'granted'
+        function loadAnalytics(consent) {
+            if (consent === 'accepted') {
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'analytics_storage': 'granted'
+                });
+                gtag('event', 'consent_update', { 'event_category': 'Consent', 'event_label': 'Accepted' });
+            } else {
+                gtag('consent', 'update', {
+                    'ad_storage': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const acceptBtn = document.getElementById('acceptBtn');
+            const declineBtn = document.getElementById('declineBtn');
+
+            acceptBtn.addEventListener('click', () => {
+                loadAnalytics('accepted');
+                document.querySelector('.wrapper').style.display = 'none';
+            });
+
+            declineBtn.addEventListener('click', () => {
+                loadAnalytics('denied');
+                document.querySelector('.wrapper').style.display = 'none';
+            });
         });
-    } else {
-        // Refuser le consentement
-        gtag('consent', 'update', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied'
-        });
-    }
-}
+    </script>
 
-
-
-    
-
+    <!-- Redirection si index.html -->
+    <script>
+        if (window.location.pathname.endsWith("index.html")) {
+            window.location.replace(window.location.origin + "/");
+        }
+    </script>
 </head>
-<body>
 
-    <!------------------------------------COOKIE 2025 -------------------------------------------------->
+<body>
+    <!-- COOKIE CONSENT -->
     <div class="wrapper">
         <header>
             <i class="bx bx-cookie"></i>
@@ -66,196 +77,91 @@ function loadAnalytics(consent) {
             <button class="button" id="declineBtn">Decline</button>
         </div>
     </div>
-    <!------------------------------------COOKIE END -------------------------------------------------->
+    <!-- END COOKIE CONSENT -->
+
+    <!-- NAVIGATION -->
     <nav>
         <div class="nav-logo">
             <a href="index.html">
                 <img src="images/UNWARE-STUDIO.png" alt="Logo Unware Studio">
             </a>
         </div>
-
         <ul class="nav-links">
-            <li class="link"><a href="#">Home</a></li>
-            <li id="link2" class="link"><a href="Pictures.html">Pictures</a></li>
-            <li id="link1" class="link"><a href="confidentality.html">Privacy Policy</a></li>
-            <li id="link1" class="link"><a href="Cookies.html">Cookies Policy</a></li>
-            <li id="link3" class="link"><a href="AboutMe.html">About Me</a></li>
-            <li id="link3" class="link"><a href="Contact.html">Contact Me</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="Pictures.html">Pictures</a></li>
+            <li><a href="confidentality.html">Privacy Policy</a></li>
+            <li><a href="Cookies.html">Cookies Policy</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="Contact.html">Contact Me</a></li>
         </ul>
-        
     </nav>
 
+    <!-- HEADER -->
     <header class="container">
         <div class="content">
             <span class="blur"></span>
-            <h4></h4>
-            <H1>THE LAST HORIZON  2025 <span>ON STEAM</span></H1>
-            <p>
-                A Unreal Engine 5 Game.
-            <p>
-               
-            </p>
+            <h1>THE LAST HORIZON 2025 <span>ON STEAM</span></h1>
+            <p>A Unreal Engine 5 Game.</p>
             <button class="btn">Trailer Soon</button>
         </div>
-<div class="imge">
-<picture>
-    <source srcset="images/The-Last-Horizon.avif" type="image/avif">
-    <source srcset="images/The-Last-Horizon.png" type="imagepng"> 
-    <img src="images/The-Last-Horizon.png" alt="The Last Horizon">
-</picture>
-
-</div>
-
+        <div class="imge">
+            <picture>
+                <source srcset="images/The-Last-Horizon.avif" type="image/avif">
+                <source srcset="images/The-Last-Horizon.png" type="image/png">
+                <img src="images/The-Last-Horizon.png" alt="The Last Horizon">
+            </picture>
+        </div>
     </header>
 
+    <!-- FEATURES -->
     <section class="container">
         <h2 class="header">AN UNWARE Studio Production</h2>
         <div class="features">
             <div class="card">
-                <span> <i class='bx bx-slideshow' style='color:#ffffff' ></i></span>
-                 
+                <i class='bx bx-slideshow' style='color:#ffffff'></i>
                 <h4>4K ULTRA</h4>
-                <p>
-                    Beautiful Decor <br> Filming at IPhone <br> A horror Game in a Sci Fi Laboratory.<br>
-                </p>
-                <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
-                
+                <p>Beautiful Decor<br>Filming at iPhone<br>A horror Game in a Sci-Fi Laboratory.</p>
             </div>
             <div class="card">
-                <span><i class='bx bxl-steam' style='color:#ffffff' ></i>
-                </span>
-                <h4>
-                    Buy on Steam</h4>
-                <p>
-                    10$ 
-                </p>
-                <a href="#">Soon  <i class="ri-arrow-right-line"></i></a>
-                
+                <i class='bx bxl-steam' style='color:#ffffff'></i>
+                <h4>Buy on Steam</h4>
+                <p>$10</p>
             </div>
             <div class="card">
-                <span><i class="ri-history-line"></i></span>
-                <h4>Release date ?</h4>
-                <p>
-                    Maybe of the 3rd trimester
-                </p>
-                <a href="#">Join Now <i class="ri-arrow-right-line"></i></a>
+                <i class="ri-history-line"></i>
+                <h4>Release Date?</h4>
+                <p>Maybe the 3rd trimester</p>
             </div>
             <div class="card">
-                <span><i class='bx bxl-windows'></i></i></span>
-                
-                <h4>
-                    Windows 10/11</h4>
-                <p>
-                    Compatible <br> Windows 10 And 11  
-                </p>
-                   </div>
-        </div>
-    </section>
-
-
-    <section class="container">
-        <h2 class="header">PRICING</h2>
-        <p class="sub-header">
-           
-        </p>
-        <div class="pricing">
-            <div class="card">
-                <div class="cotent">
-                   
-                </div>
-                
-           
-                <div class="content">
-                    <h4>Game Plan</h4>
-                    <h3>10$</h3>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Unreal Engine 5
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Windows 10/11
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Minimal Config / Ryzen 3 3200g / GTX 1650 SUPER/ 16 GO RAM.
-                    
-                        <p>
-                            <i class="ri-checkbox-circle-line"></i>
-                            Recommended Config / Ryzen 5 1600 / RTX 3050 / 16 GO RAM.
-                        </p>
-                      
-                    </p>
-                </div>
-                <button class="btn">Steam 2025</button>
-            </div>
-            
-                   
-                  
-                    </p>
-                </div>
-                
+                <i class='bx bxl-windows'></i>
+                <h4>Windows 10/11</h4>
+                <p>Compatible with Windows 10 and 11</p>
             </div>
         </div>
     </section>
 
-
+    <!-- FOOTER -->
     <footer class="container">
-        <span class="blur"></span>
         <div class="column">
             <div class="logo">
-              <img src="images/UNWARE-STUDIO.png" alt="Logo Unware Studio">
+                <img src="images/UNWARE-STUDIO.png" alt="Logo Unware Studio">
             </div>
-        
-
             <h4>Contact</h4>
             <a href="Contact.html">Contact Me</a>
             <a href="confidentality.html">Privacy Policy</a>
             <a href="Terms&Conditions.html">Terms & Conditions</a>
-            <div class="socials">
-                <!-- Lien vers YouTube avec l'icône Boxicons -->
-                <a href="https://www.youtube.com/@unware.studio" aria-label="Visitez notre chaîne YouTube" title="Visitez notre chaîne YouTube">
-                    <i class="bx bxl-youtube"></i> <!-- Icône YouTube -->
-                </a>
-                <!-- Lien vers Instagram avec l'icône Boxicons -->
-                <a href="https://www.instagram.com/" aria-label="Suivez-nous sur Instagram" title="Suivez-nous sur Instagram">
-                    <i class="bx bxl-instagram"></i> <!-- Icône Instagram -->
-                </a>
-                <!-- Lien vers Twitter (X) avec l'icône Boxicons -->
-                <a href="https://x.com/unware_studio" aria-label="Suivez-nous sur Twitter (X)" title="Suivez-nous sur Twitter (X)">
-                    <i class="bx bxl-twitter"></i> <!-- Icône Twitter -->
-                </a>
-            </div>
-
-         
-    </div>
         </div>
-        <div class="column">
-            <h4>Company</h4>
-            <a href="#">Business</a>
-            <a href="#">Partnership</a>
-            <a href="#">Network</a>
+        <div class="socials">
+            <a href="https://www.youtube.com/@unware.studio"><i class="bx bxl-youtube"></i></a>
+            <a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
+            <a href="https://x.com/unware_studio"><i class="bx bxl-twitter"></i></a>
         </div>
-        <div class="column">
-            <h4>About Me</h4>
-            <a href="#">Blogs</a>
-            <a href="#">Channels</a>
-            <a href="#">Sponsors</a>
+        <div class="copyright">
+            Copyright © 2025 UNWARE STUDIO. All Rights Reserved.
         </div>
-
-        <div class="column">
-    <h4>Contact</h4>
-    <a href="Contact.html" aria-label="Contactez-moi">Contact Me</a>
-    <a href="confidentality.html" aria-label="Politique de confidentialité">Privacy Policy</a>
-    <a href="Terms&Conditions.html" aria-label="Conditions générales">Terms & Conditions</a>
-       </div>
-
     </footer>
 
-    <div class="copyright">
-        Copyright © 2025 UNWARE STUDIO. All Rights Reserved.
-    </div>
-
     <script src="script.js"></script>
- </body>
+</body>
+
 </html>
