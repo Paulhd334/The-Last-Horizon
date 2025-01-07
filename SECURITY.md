@@ -25,7 +25,7 @@ If you discover a vulnerability or security issue on our website, please follow 
    We aim to respond within 48 hours. Weekly updates will be provided regarding the status of your report.
 
 4. **If Accepted**:  
-   If the vulnerability is confirmed, we will deploy a fix promptly and can credit your contribution upon request.
+   If the vulnerability is confirmed, we will deploy a fix.
 
 5. **If Rejected**:  
    If the vulnerability is not accepted, we will provide an explanation.
