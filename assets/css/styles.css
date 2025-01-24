@@ -5,13 +5,13 @@
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(260, 100%, 50%);
-  --second-color: hsl(190, 100%, 50%);
-  --third-color: hsl(54, 100%, 50%);
-  --fourth-color: hsl(210, 100%, 50%);
-  --button-color: hsl(260, 16%, 8%);
+  --first-color:     red;
+  --second-color: red;
+  --third-color: red;
+  --fourth-color: red;
+  --button-color:    hsl(260, 24%, 6%);
   --text-color: #fff;
-  --body-color: hsl(260, 24%, 6%);
+  --body-color:   hsl(260, 24%, 6%);
   
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -107,6 +107,60 @@ a {
 .button:hover .button__shadow {
   opacity: 1;
 }
+
+
+/* Global container to center everything */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+/* Container for the button */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Space for the button to be centered */
+}
+
+/* Style for the warning text */
+.warning-text {
+  color: #ff4d4d; /* Red to attract attention */
+  font-size: 1.5rem; /* Slightly larger text */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem; /* Space between the button and text */
+  padding: 0 1rem; /* Margin for responsiveness */
+  font-family: var(--body-font); /* Consistent font */
+  position: absolute;
+  bottom: 20px; /* Position it at the bottom of the page */
+  width: 100%; /* Ensure it spans the entire width */
+}
+
+/* Animation for the important text */
+.warning-text strong {
+  animation: pulse 1.5s infinite;
+}
+
+/* Pulse animation for emphasis */
+@keyframes pulse {
+  0%, 100% {
+    color: #ff4d4d;
+    transform: scale(1);
+  }
+  50% {
+    color: #ff9999;
+    transform: scale(1.1);
+  }
+}
+
+
+
 
 /* Animate shapes */
 @keyframes shape-1 {
