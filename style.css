@@ -437,11 +437,5 @@ header, .features, .pricing, footer {
         opacity: 1;
         animation: none; /* Pas d'animation sur les cartes */
     }
-  
-    .imge {
-    width: 100%;
-    display: flex;
-    border-radius: 15px;
-    position: relative;
- }
+  }
 }
